@@ -74,4 +74,4 @@ getgenv().aviri = {
         ["low health"] = { ["health threshold"] = 35, ["multiplier"] = 45 },
     },
 }
-loadstring(game:HttpGet("https://api.luarmor.net/files/v4/loaders/35fa84928eee93df1641497d8e3fbdb9.lua"))()
+loadstring(game:HttpGet("https://api.luarmor.net/files/v4/loaders/d560527d3ffe06a1ec3fc1f9ac67d755.lua"))()
